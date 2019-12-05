@@ -22,8 +22,8 @@
         <div class="col-50 welcome">
             <h1>HawkeyNL</h1>
             <p><span>Front & Back End Developer</span></p>
-            <p class="welcome-info">Hey, I am 17 Year's old and live in the Netherlands.<br>I Currently study Computer Sience.</p>
-            <p>Wanna found out what I made so far?</p>
+            <p class="welcome-info">Hey, I am 17 Year's old and I live in the Netherlands.<br>I Currently study Computer Sience.</p>
+            <p>Want to found out what I made so far?</p>
             <a class="btn" href="#about">More <i class="fas fa-chevron-circle-down"></i></a>
         </div>
         <div class="clear"></div>

@@ -1,0 +1,508 @@
+/* 
+    Basic importing
+*/
+
+@font-face {
+    font-family: 'Techmono';
+    src: url('https://fonts.googleapis.com/css?family=Share+Tech+Mono') format('woff2');
+}
+
+// Default Colors
+@green: #00FF5C;
+@blue: #00FFCB;
+@white: #FFFFFF;
+@black: #000000;
+@grey: #B9B9B9;
+
+@red-msg: #ed0909;
+@orange-msg: #ed7309;
+@yellow-msg: #edd209;
+@green-msg: #0ded09;
+
+@green-blue: linear-gradient(to right top, @blue 0%, @green 100%);
+
+// Icons Colors
+@github: #24292E;
+@twitter: #1DA1F2;
+@discord: #26262B;
+
+// Languages Color
+@html5: #E44D26;
+@css3: #1A70B5;
+@less: #294B7F;
+@javascript: #F0D91C;
+@typescript: #0176C9;
+@mysql: #84283d;
+@php: #697BB2;
+@java: #F89917;
+
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: @grey;
+}
+
+//::-webkit-scrollbar-track {
+//    // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+//	border-radius: 10px;
+//	// background-color: #F5F5F5;
+//}
+
+::-webkit-scrollbar-thumb {
+    //border-radius: 10px;
+	// -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: @green;
+}
+
+/*
+    Default Layout
+*/
+
+.clear {
+  clear: both;
+}
+
+/* Columns */
+.col-100 {
+  width: 100%;
+  height: auto;
+  float: left;
+}
+
+.col-80 {
+  width: 80%;
+  height: auto;
+  float: left;
+}
+
+.col-70 {
+  width: 70%;
+  height: auto;
+  float: left;
+}
+
+.col-60 {
+  width: 60%;
+  height: auto;
+  float: left;
+}
+
+.col-50 {
+  width: 50%;
+  height: auto;
+  float: left;
+}
+
+.col-40 {
+  width: 40%;
+  height: auto;
+  float: left;
+}
+
+.col-30 {
+  width: 30%;
+  height: auto;
+  float: left;
+}
+
+.col-25 {
+  width: 25%;
+  height: auto;
+  float: left;
+}
+
+.col-20 {
+  width: 20%;
+  height: auto;
+  float: left;
+}
+
+/* Containers */
+.container {
+  float: none;
+  margin: 0 auto;
+}
+
+.content {
+  margin: 15px 5px;
+}
+
+/* Span(s) */
+span {
+  background: @green-blue;
+  padding: 5px 15px;
+  border-radius: 1000px;
+  font-weight: bold;
+  color: @white;
+}
+
+.new {
+  background: @green-blue;
+  padding: 5px 10px;
+  border-radius: 1000px;
+  color: @white;
+}
+
+/* Buttons */
+.btn {
+  border: none;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.btn-default {
+  background-color: @white;
+  color: @grey;
+  border: 2px solid @grey;
+}
+
+.btn-primary {
+  background: @green-blue;
+  color: @white;
+}
+
+/* H(1,2,3,4,5,6), A, P Tags*/
+h1, h2, h3, h4, h5, h6, a, p {
+  color: @grey;
+  text-decoration: none;
+}
+
+/* Font Awesome (i tags) */
+.fas {
+  font-family: "Techmono", sans-serif;
+  color: @green-blue;
+  //padding: 12px 16px;
+  //border: 3px solid @grey;
+  //border-radius: 50px;
+  transition: 0.5s ease-in-out;
+
+  &:hover {
+    color: @green;
+    //border: 3px solid @green;
+    transition: 0.5s ease-in-out;
+  }
+}
+
+/* Floats */
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: right;
+}
+
+/*
+    Layout
+*/
+body {
+  font-family: 'Share Tech Mono', monospace;
+  margin: 0;
+  padding: 0;
+
+  .navbar {
+    z-index: 99999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+
+    nav {
+      opacity: 0;
+      float: right;
+      display: inline-block;
+
+      ul {
+        list-style: none;
+        li {
+          display: inline-block;
+          color: @white;
+
+          a {
+            color: @white;
+            padding: 6px 16px;
+            margin: 0 10px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .nav-brand {
+      float: left;
+      margin-left: 5%;
+      #logo {
+        span {
+          background-color: @green;
+          padding: 5px 15px;
+          border-radius: 1000px;
+          font-weight: bold;
+          color: @white;
+        }
+      }
+    }
+  }
+
+  header {
+    height: 100vh;
+    padding: 0 5%;
+    background-image: url("../img/svg/background_header.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top right;
+
+    .welcome {
+      margin: 20vh 0;
+
+      h1 {
+        font-size: 76px;
+        color: @grey;
+        margin: 30px 0;
+      }
+
+      p {
+        font-size: 16px;
+        margin: 30px 0;
+      }
+
+      .welcome-info {
+        margin: 30px 0;
+      }
+    }
+
+    // Login Page
+    .login {
+      margin: 10% 0;
+
+      label {
+        font-size: 16px;
+        color: @grey;
+        margin: 10px 0;
+        padding: 14px 0;
+      }
+
+      input[type="text"], input[type="password"] {
+        width: 60%;
+        padding: 10px 16px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 1.5px solid @grey;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        outline: none;
+      }
+
+      input[type="submit"] {
+        border: none;
+        padding: 12px 32px;
+        margin: 10px 0;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        background: @green-blue;
+        color: @white;
+        width: 60%;
+      }
+    }
+  }
+
+  main {
+    section {
+      width: 100%;
+      height: 100vh;
+    }
+
+    // About Section
+    #about {
+      h2 {
+        padding-top: 10%;
+        font-size: 36px;
+        border-bottom: 2px solid @grey;
+      }
+
+      .media {
+        ul {
+          list-style: none;
+
+          li {
+            padding: 0 16px 12px 16px;
+            font-size: 26px;
+
+            a {
+              transition: 0.5s ease-in-out;
+
+              &.github:hover {
+                color: @github;
+                transition: 0.5s ease-in-out;
+              }
+
+              &.twitter:hover {
+                color: @twitter;
+                transition: 0.5s ease-in-out;
+              }
+
+              &.discord:hover {
+                color: @discord;
+                transition: 0.5s ease-in-out;
+              }
+
+              i {
+                padding: 0 12px;
+                font-size: 32px;
+              }
+            }
+          }
+        }
+      }
+
+      .languages {
+        .col-30 {
+          margin: 25px 5% 25px 0;
+
+          .name {
+            float: left;
+            font-size: 18px;
+
+            i.fa-html5 {
+              color: @html5;
+            }
+
+            i.fa-css3-alt {
+              color: @css3;
+            }
+
+            i.fa-less {
+              color: @less;
+            }
+
+            i.fa-js-square {
+              color: @javascript;
+            }
+
+            i.fa-php {
+              color: @php;
+            }
+
+            i.fa-database {
+              color: @mysql;
+            }
+
+            i.fa-java {
+              color: @java;
+            }
+          }
+
+          .percentage {
+            float: right;
+          }
+
+          .skills {
+            width: 100%;
+            float: left;
+            background-color: @grey;
+
+            .skill {
+              height: 4px;
+              width: 100%;
+              background-color: @grey;
+            }
+
+            .html5-css3-less {width: 90%; background-color: @html5;}
+            .javascript {width: 70%; background-color: @javascript;}
+            .typescript {width: 40%; background-color: @typescript;}
+            .php {width: 70%; background-color: @php;}
+            .mysql {width: 60%; background-color: @mysql;}
+            .java {width: 50%; background-color: @java;}
+          }
+        }
+
+        .no-mg-r {
+          margin-right: 0;
+        }
+      }
+    }
+
+    // Projects Section
+    #projects {
+      background-image: url("../img/svg/projects.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center left;
+
+      .col-70 {
+        margin-left: 30%;
+
+        .col-30 {
+          margin: 0 1.66666667% 0 0;
+          height: 250px;
+
+          .content {
+            .col-100 {
+              margin: 0 0 15px 0;
+            }
+          }
+
+          .p-title {
+            margin: 20px;
+          }
+
+          .p-icon {
+            font-size: 22px;
+            margin: 25px 5px 0 5px;
+          }
+
+          .p-left-icon {
+            margin-left: 10px;
+          }
+
+          .p-desc {
+            margin: 20px;
+          }
+        }
+
+        h2 {
+          padding-top: 10%;
+          font-size: 36px;
+          border-bottom: 2px solid @grey;
+          margin: 0 6.4% 0 0;
+        }
+      }
+    }
+  }
+
+  footer {
+    height: 75px;
+    background-color: @grey;
+
+    p {
+      color: @white;
+      text-align: center;
+      line-height: 4.5;
+    }
+  }
+}
+
+.fadein {
+  opacity: 0;
+}
+
+/* Messages */
+.error {
+  background-color: @red-msg;
+}
+
+.warning {
+  background-color: @yellow-msg;
+}
+
+.alert-warning {
+  background-color: @orange-msg;
+}
+
+.success {
+  background-color: @green-msg;
+}

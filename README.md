@@ -3,7 +3,7 @@
 
 ## Author
 **Private Website** © [@HawkeyNL](https://github.com/hawkeynl).<br>
-Authored and maintained HawkeyNL.
+Authorized and Maintained by HawkeyNL.
 
 > GitHub [@HawkeyNL](https://github.com/hawkeynl)<br>
 > Website [./Website](https://github.com/Website)
